@@ -54,8 +54,7 @@ function defineVariable(str) {
         value1 += str;
         isNewOperation = false;
     } else {
-        if (!value2)
-            value2 = '';
+        value2 ??= '';
         value2 += str;
     }
 }
