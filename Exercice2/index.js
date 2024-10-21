@@ -1,9 +1,11 @@
 function calculate(a, b, operator) {
+    const A = +a;
+    const B = +b;
     switch (operator) {
-        case '+': return a + b;
-        case '-': return a - b;
-        case '*': return a * b;
-        case '/': return b === 0 ? 'Division by zero is not allowed' : a / b;
+        case '-': return A - B;
+        case '+': return A + B;
+        case '*': return A * B;
+        case '/': return B === 0 ? 'Division by zero is not allowed' : A / B;
         default: return 'Invalid operator';
     }
 }

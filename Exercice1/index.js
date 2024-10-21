@@ -1,10 +1,10 @@
 function pairNumbers(firstNumber, lastNumber) {
-    const pairNumbers = [];
+    const pairsArray = [];
     for (let i = firstNumber; i <= lastNumber; i++) {
         if (i % 2 === 0)
-            pairNumbers.push(i);
+            pairsArray.push(i);
     }
-    return pairNumbers;
+    return pairsArray.toString();
 }
 
 export default pairNumbers

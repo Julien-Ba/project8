@@ -1,15 +1,18 @@
 function convertToBinary() {
     const display = document.querySelector('#binaryResult');
     let input = document.querySelector('#decimalInput');
-    let num = parseFloat(input.value);
 
-    // Not a number
-    if (isNaN(num))
-        return display.textContent = 'Invalid input';
+    for (const char of Array.from(input.value)) {
+        console.log(char);
+        if (isNaN(+char))
+            return display.textContent = '';
+    }
 
     // If it's 0 no need for conversion
-    if (num === 0)
+    if (input.value === '0')
         return display.textContent = '0';
+
+    let num = parseFloat(input.value);
 
     // Separate int & fraction
     let integerPart = Math.floor(num);
